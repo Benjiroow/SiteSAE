@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-text-auto: black;
+    --clr-hover: blue;
+    --clr-menu-1: #919191;
+    --clr-menu-2: #e3350d;
+    --clr-menu-3: #ee6b2f;
+    --clr-menu-4: #e6bc2f;
+    --clr-menu-5: #4dad5b;
+    --clr-menu-6: #30a7d7;
+    --clr-menu-7: #1b53ba;
+    --clr-type-insecte: #729f3f;
+    --clr-type-dragon-1: #53a4cf;
+    --clr-type-dragon-2: #f16e57;
+    --clr-type-fee: #fdb9e9;
+    --clr-type-feu: #fd7d24;
+    --clr-type-spectre: #7b62a3;
+    --clr-type-sol-1: #f7de3f;
+    --clr-type-sol-2: #ab9842;
+    --clr-type-normal: #a4acaf;
+    --clr-type-psy: #f366b9;
+    --clr-type-acier: #9eb7b8;
+    --clr-type-tenebres: #707070;
+    --clr-type-electrik: #eed535;
+    --clr-type-combat: #d56723;
+    --clr-type-vol-1: #3dc7ef;
+    --clr-type-vol-2: #bdb9b8;
+    --clr-type-plante: #9bcc50;
+    --clr-type-glace: #51c4e7;
+    --clr-type-poison: #b97fc9;
+    --clr-type-roche: #a38c21;
+    --clr-type-eau: #4592c4;
+    --clr-stats: #a4a4a4;
+    --clr-stats-bleu: #41a7d7;
+}
+
+/* --- GENERAL --- */
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "roboto";
+    font-size: 16px;
+}
+
+main {
+    background-image: url("../images/container_bg.png");
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ----- Navigation -----*/
+
+.navigation {
+    height: 93px;
+    width: 80%;
+    margin: auto auto 50px auto;
+    text-align: center;
+}
+
+.navigation a {
+    color: black;
+}
+
+.navigation li {
+    float: left;
+    border-bottom: solid 5px;
+    width: 14%;
+    height: 100px;
+    padding-top: 35px;
+}
+
+.navigation ul li:nth-child(1) {
+    border-color: var(--clr-menu-1);
+}
+
+.navigation ul li:nth-child(2) {
+    border-color: var(--clr-menu-2);
+}
+
+.navigation ul li:nth-child(3) {
+    border-color: var(--clr-menu-3);
+}
+
+.navigation ul li:nth-child(4) {
+    border-color: var(--clr-menu-4);
+}
+
+.navigation ul li:nth-child(5) {
+    border-color: var(--clr-menu-5);
+}
+
+.navigation ul li:nth-child(6) {
+    border-color: var(--clr-menu-6);
+}
+
+.navigation ul li:nth-child(7) {
+    border-color: var(--clr-menu-7);
+}
+
+.navigation ul li:hover {
+    transition: background-color 0.5s;
+}
+
+.navigation li:hover {
+    background-color: blue;
+}
+
+.navigation ul li:nth-child(1):hover {
+    background-color: var(--clr-menu-1);
+}
+
+.navigation ul li:nth-child(2):hover {
+    background-color: var(--clr-menu-2);
+}
+
+.navigation ul li:nth-child(3):hover {
+    background-color: var(--clr-menu-3);
+}
+.navigation ul li:nth-child(4):hover {
+    background-color: var(--clr-menu-4);
+}
+
+.navigation ul li:nth-child(5):hover {
+    background-color: var(--clr-menu-5);
+}
+
+.navigation ul li:nth-child(6):hover {
+    background-color: var(--clr-menu-6);
+}
+
+.navigation ul li:nth-child(7):hover {
+    background-color: var(--clr-menu-7);
+}
+
+/* ---- Structure ---- */
+
+.container {
+    width: 70%;
+    max-width: 930px;
+    margin: auto;
+    background-color: white;
+}
+
+.caracteristics.active {
+    display: flex;
+    column-gap: 3%;
+    padding-bottom: 20px;
+}
+
+.caracteristics {
+    display: none;
+}
+
+.left {
+    width: 48%;
+}
+
+.right {
+    width: 48%;
+}
+
+.stats {
+    margin-top: 5px;
+}
+
+.pres {
+    margin-bottom: 10px;
+}
+
+.pres-descriptions .version {
+    display: none;
+    padding: 0px 10px;
+}
+
+.pres-descriptions .version.active {
+    display: block;
+}
+
+.pres-buttons {
+    padding: 10px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+/* ----- Title --------*/
+.header-title {
+    background-color: white;
+
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.num {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    padding: 0 2%;
+}
+
+/*--- Bloc propriétés ---*/
+
+.proprietes {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px 10px;
+
+    font-size: 1.2rem;
+    font-weight: normal;
+
+    background-color: var(--clr-menu-6);
+}
+
+.proprietes h2 {
+    color: white;
+
+    font-size: 1.1rem;
+    font-weight: normal;
+
+    padding: 0.3rem;
+}
+
+.proprietes span {
+    padding: 1%;
+    padding: 0.3rem;
+}
+
+.pokemon-num {
+    color: gray;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.pokemon-nom {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* --- Talents --- */
+
+.talents {
+    padding: 0 0.3rem;
+}
+
+.talents-item span {
+    display: none;
+}
+
+.talents-item:hover span {
+    display: block;
+    position: absolute;
+    width: 150px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--clr-menu-1);
+}
+
+.talents-descr {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100px;
+    background-color: var(--clr-menu-1);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* --- Dégats --- */
+
+.degats {
+    display: inline-block;
+    padding: 0 0.3rem;
+    position: relative;
+}
+
+.degats span:first-child {
+    display: inline-block;
+    border-radius: 100px;
+    background-color: var(--clr-type-tenebres);
+    color: white;
+    width: 1rem;
+    height: 1rem;
+}
+
+.degats .description {
+    display: none;
+}
+
+.degats:hover .description {
+    display: block;
+    position: absolute;
+    top: -3rem;
+    width: 100px;
+    border-radius: 10px;
+    padding: 1rem 0;
+    color: white;
+    background-color: var(--clr-type-tenebres);
+    font-size: 0.8rem;
+}
+
+
+/* --- Stats --- */
+.stats {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--clr-stats);
+    border-radius: 10px;
+}
+
+.stats-boxes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin: 15px auto auto auto;
+}
+
+.stats-cell {
+    height: 7px;
+}
+
+.stats-cell--white {
+    background-color: white;
+}
+
+.stats-cell--blue {
+    background-color: var(--clr-stats-bleu);
+}
+
+.stats h2 {
+    font-size: 1rem;
+}
+
+.stats-intitule {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+/* --- Types et Faiblesses --- */
+
+.types-faiblesses {
+    padding: 0px 10px;
+}
+
+.types-faiblesses h2 {
+    padding: 1.3rem;
+
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+.types ul, .types-faiblesses ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.types-faiblesses li {
+    width: 32%;
+    padding: 9px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.types li {
+    width: 100px;
+    padding: 0px 2px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.type--insecte {
+    background-color: var(--clr-type-insecte);
+    color: white;
+}
+
+.type--fee {
+    background-color: var(--clr-type-fee);
+    color: black;
+}
+
+.type--feu {
+    background-color: var(--clr-type-feu);
+    color: white;
+}
+
+.type--spectre {
+    background-color: var(--clr-type-spectre);
+    color: white;
+}
+
+.type--normal {
+    background-color: var(--clr-type-normal);
+    color: black;
+}
+
+.type--psy {
+    background-color: var(--clr-type-psy);
+    color: white;
+}
+
+.type--acier {
+    background-color: var(--clr-type-acier);
+    color: black;
+}
+
+.type--tenebres {
+    background-color: var(--clr-type-tenebres);
+    color: white;
+}
+
+.type--electrik {
+    background-color: var(--clr-type-electrik);
+    color: black;
+}
+
+.type--combat {
+    background-color: var(--clr-type-combat);
+    color: white;
+}
+
+.type--plante {
+    background-color: var(--clr-type-plante);
+    color: black;
+}
+
+.type--glace {
+    background-color: var(--clr-type-glace);
+    color: black;
+}
+
+.type--poison {
+    background-color: var(--clr-type-poison);
+    color: white;
+}
+
+.type--roche {
+    background-color: var(--clr-type-roche);
+    color: white;
+}
+
+.type--eau {
+    background-color: var(--clr-type-eau);
+    color: white;
+}
+
+.type--vol {
+    background: linear-gradient(180deg, var(--clr-type-vol-1) 50%, var(--clr-type-vol-2) 50%);
+    color: black;
+}
+
+.type--dragon {
+    background: linear-gradient(180deg, var(--clr-type-dragon-1) 50%, var(--clr-type-dragon-2) 50%);
+    color: white;
+}
+
+.type--sol {
+    background: linear-gradient(180deg, var(--clr-type-sol-1) 50%, var(--clr-type-sol-2) 50%);
+    color: black;
+}
+
+/* --- Pokeball --- */
+.pokeball {
+    box-sizing: content-box;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+.pokeball--blue {
+    background-color: blue;
+}
+
+.pokeball--red {
+    background-color: red;
+}
+
+.pokeball-ligne {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    top: 14px;
+}
+
+.pokeball-button {
+    box-sizing: content-box;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    border: 2px solid white;
+    top: 6px;
+    left: 8px;
+}
+
+.pokeball-button--blue {
+    background-color: blue;
+}
+
+.pokeball-button--red {
+    background-color: red;
+}
+
+.pokeball.active {
+    border: 5px solid black;
+}
+
+/* --- Variations --- */
+.variations {
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px;   
+}
+
+select {
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    width: 45%;
+    height: 40px;
+    font-size: 1rem;
+}
+
+/*--- Fin ---*/
+
+#prec-suiv a {
+    width: 49.5%;
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+    background-color: gray;
+    padding: 1% 0 5% 0;
+    font-weight: bold;
+    color: #171616;
+    font-size: 1.2rem;
+    transition: background-color 0.5s;
+}
+
+#prec-suiv a:hover {
+    background-color: #30a7d7;
+}
+
+.fleche {
+    background-color: white;
+    border-radius: 100%;
+    width: 22px;
+    display: inline-block;
+}
+
+.img-full {
+    width: 100%;
+    margin: auto;
+}
+
+figure {
+    margin: auto;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    position: relative;
+}
+
+ul > div {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+
+/*  CSS pour le pokedex  */
+.pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+/* --- Pagination --- */
+.nav-pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+        
+.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+        
+.pagination li {
+    margin: 0 1px;
+    padding: 10px 15px;
+    text-align: center;
+    border:#707070 solid 1px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.current-page {
+    background-color: #a4acaf;
+}
+
+.current-page {
+    color: white;
+}
+
+.pagination a {
+    color: black;
+}
+   
+.visuallyhidden {
+    display: none;
+}
+
+/* -- formulaire de recherche -- */
+.search {
+    background-color: #171616;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.search-btn {
+    height:50px;
+    width:50px;
+    background-color: #fd7d24;
+    font-size: 2rem;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.search-field {
+    height: 50px;
+    width: 33%;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+.search label{
+    font-size: 2rem;
+}
