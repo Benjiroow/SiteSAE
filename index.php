@@ -2,7 +2,7 @@
 require_once 'app/model/dataConnection.php';
 require_once 'app/model/pokedex.model.php';
 
-$databaseConnection = getDatabaseConnection();
+
 $pokedex = getPokedexWhithoutTypes($databaseConnection);
 $pokedex = addTypesToPokemons($pokedex, $databaseConnection);
 
@@ -25,6 +25,7 @@ $results = $stmt ->fetchAll();
 
 print_r($results);
 */
+
 
 
 
