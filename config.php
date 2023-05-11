@@ -1,3 +1,3 @@
 <?php
 
-DEFINE('URL', 'https://localhost/pokemonSem2/');
+DEFINE('URL', 'https://localhost/SiteSAE/');
