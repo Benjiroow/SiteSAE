@@ -1,0 +1,16 @@
+@font-face
+{
+    font-family:'Rasputin'; 
+    src: url('../polices/rasputin/Rasputin.otf'); 
+    
+}
+
+
+body{
+    margin:0;
+    background-image:url("../images/DALLE_2023-04-19_12.01.00_-_fantastic_forest_with_lights_effects.png") ;
+    background-position:center;
+    background-repeat: no-repeat;
+    height:700px;
+}
+
