@@ -8,10 +8,6 @@
 
 body{
     margin:0;
-    background-image:url("DALLE_2023-04-19_12.01.00_-_fantastic_forest_with_lights_effects.png") ;
-    background-position:center;
-    background-repeat: no-repeat;
-    height:700px;
 }
 
 nav {
@@ -117,4 +113,3 @@ nav {
     margin-left:-27px;
     margin-right: +220px;
 }
-

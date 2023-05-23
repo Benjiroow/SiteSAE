@@ -4,17 +4,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="<?= $css ?>">
+    <link rel="icon" type="image/png" href="public\images\logo_alda_blanc_sur_fond_noir"/>
+    <link rel="stylesheet" href="public/css/header.style.css">
+    <link rel="stylesheet" href="public/css/footer.style.css">
     <title><?= $page_title ?></title>
 </head>
 
 <body>
-
-    <header>
-        <?php include 'app/view/common/navigation.php' ?>     
-    </header>
-
+        <header>
+                <nav>
+                    <ul class="menu">
+                        <li class="classheadergauche"><a href="boutique.php">Nos produits</a></li>
+                        <li class="classheadercentre"><a href="apropos.php">A propos de nous </a></li>
+                        <li id="listlogo"><a href="pageAccueil.php"><img id="logo" src="public\images\logo_alda_blanc.png"></a></li>
+                        <li class="classheadercentre"><a href="vulgarisation.php">Brassage</a></li>
+                        <li class="classheaderdroite"><a href="contact.php">Contact</a></li>
+                        <li><a href="commande.php"><img id="caddie" src="public\images\caddie.png"></a></li>
+                    </ul>
+                </nav>
+        </header>
