@@ -5,6 +5,13 @@
     
 }
 
+@font-face
+{
+    font-family:'Montserrat Regular'; 
+    src: url('../polices/Montserrat/Montserrat-Regular.ttf'); 
+    
+}
+
 
 body{
     margin:0;
@@ -12,5 +19,93 @@ body{
     background-position:center;
     background-repeat: no-repeat;
     height:700px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color:white;
+    font-family: 'Rasputin';
+    font-size: .9rem;
+    padding: 0.2rem 1rem;
+    width: 10%;
+    font-weight: bold;
+    pointer-events: none;
+    
+}
+
+
+.form {
+    float:left;
+    display:block;
+    width:2.5%;
+    margin-left: 46%;
+    margin-right:-45%;
+    
+}
+
+#form-jour{
+    position:relative;
+    width:200px;
+}
+
+
+h1{
+    font-family: 'Rasputin';
+    color:white;
+    text-align: center;
+    padding-top: 3%;
+    font-size: 200%;
+    margin-bottom: -4%;
+}
+
+h2{
+    font-family: 'Rasputin';
+    color:white;
+    text-align: center;
+    padding-top: 3%;
+    font-size:100%;
+}
+
+
+
+
+  
+.selectdiv {
+    position: relative;
+    display:flex;
+    float: left;
+    justify-content: center;
+    width:100%;
+    flex-wrap: wrap;
+}
+
+.selectdiv:after {
+    content: '<>';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    transform: rotate(90deg);
+    right: 47px;
+    top: 1px;
+    padding: 0;
+    border-bottom: 1px solid #999;
+    position: relative;
+    pointer-events: none;
+}
+  
+.selectdiv select {
+    appearance: none;
+    /* Add some styling */
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    float: left;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
 }
 
