@@ -15,7 +15,7 @@
 
 body{
     margin:0;
-    background-image:url("../images/DALLE_2023-04-19_12.01.00_-_fantastic_forest_with_lights_effects.png") ;
+    /*background-image:url("../images/DALLE_2023-04-19_12.01.00_-_fantastic_forest_with_lights_effects.png") ;*/
     background-position:center;
     background-repeat: no-repeat;
     height:700px;
@@ -33,20 +33,6 @@ body{
     
 }
 
-
-.form {
-    float:left;
-    display:block;
-    width:2.5%;
-    margin-left: 46%;
-    margin-right:-45%;
-    
-}
-
-#form-jour{
-    position:relative;
-    width:200px;
-}
 
 
 h1{
@@ -70,33 +56,46 @@ h2{
 
 
   
-.selectdiv {
+.formulaire {
     position: relative;
     display:flex;
     float: left;
     justify-content: center;
     width:100%;
     flex-wrap: wrap;
+    column-gap: 2px;
 }
 
-.selectdiv:after {
-    content: '<>';
+
+.form-jm:after {
+    content: 'v';
     font: 17px "Consolas", monospace;
     color: #333;
     transform: rotate(90deg);
-    right: 47px;
-    top: 1px;
-    padding: 0;
-    border-bottom: 1px solid #999;
+    padding-top: 0px;
     position: relative;
     pointer-events: none;
+    top: -42px;
+    left: 57px;
+    padding-left: 3px;
+}
+
+.form-annee:after {
+    content: 'v';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    padding-top: 0px;
+    position: relative;
+    pointer-events: none;
+    top: -43px;
+    left: 80px;
+    padding-left: 3px;
 }
   
-.selectdiv select {
+.formulaire select {
     appearance: none;
-    /* Add some styling */
     display: block;
-    width: 100%;
+    width: 110%;
     max-width: 320px;
     height: 50px;
     float: left;
@@ -108,4 +107,47 @@ h2{
     background-color: #ffffff;
     border: 1px solid #cccccc;
 }
+
+#bouton{
+    position: relative;
+    display:flex;
+    float: left;
+    justify-content: center;
+    width:100%;
+}
+
+/*
+button{
+    display: block;
+    width: 110%;
+    max-width: 145px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}*/
+/*
+#valider {
+    position: relative;
+    display: block;
+    border: 1px solid white;
+    width: 5%;
+    text-align: center;
+    font-family: 'Montserrat Regular';
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 16px 16px 16px;
+    border: 1px solid black; 
+}
+*/
+/*
+#valider{
+    margin-top: 5%;
+    margin-left: -11%;
+}
+*/
 
