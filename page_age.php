@@ -21,7 +21,7 @@ require_once 'app/view/common/layout.php';
 
 
 
-$dnn=$_POST['annee'];
+
 
 
 
