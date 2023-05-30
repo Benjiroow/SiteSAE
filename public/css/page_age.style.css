@@ -5,6 +5,13 @@
     
 }
 
+@font-face
+{
+    font-family:'Montserrat Regular'; 
+    src: url('../polices/Montserrat/Montserrat-Regular.ttf'); 
+    
+}
+
 
 body{
     margin:0;
@@ -12,5 +19,104 @@ body{
     background-position:center;
     background-repeat: no-repeat;
     height:700px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color:white;
+    font-family: 'Rasputin';
+    font-size: .9rem;
+    padding: 0.2rem 1rem;
+    width: 10%;
+    font-weight: bold;
+    pointer-events: none;
+    
+}
+
+
+
+h1{
+    font-family: 'Rasputin';
+    color:white;
+    text-align: center;
+    padding-top: 3%;
+    font-size: 200%;
+    margin-bottom: -4%;
+}
+
+h2{
+    font-family: 'Rasputin';
+    color:white;
+    text-align: center;
+    padding-top: 3%;
+    font-size:100%;
+}
+
+
+
+
+  
+.formulaire {
+    position: relative;
+    display:flex;
+    float: left;
+    justify-content: center;
+    width:100%;
+    flex-wrap: wrap;
+    column-gap: 2px;
+}
+
+
+.form-jm:after {
+    content: 'v';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    transform: rotate(90deg);
+    padding-top: 0px;
+    position: relative;
+    pointer-events: none;
+    top: -42px;
+    left: 57px;
+    padding-left: 3px;
+}
+
+.form-annee:after {
+    content: 'v';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    padding-top: 0px;
+    position: relative;
+    pointer-events: none;
+    top: -43px;
+    left: 80px;
+    padding-left: 3px;
+}
+  
+.formulaire select {
+    appearance: none;
+    display: block;
+    width: 110%;
+    max-width: 320px;
+    height: 50px;
+    float: left;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+#bouton{
+    position: relative;
+    display:flex;
+    float: left;
+    justify-content: center;
+    width:100%;
+}
+
+#abus{
+    margin-top:25%;
 }
 
