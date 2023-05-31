@@ -1,22 +1,34 @@
 <main>
     <?php include 'app/view/parts/searchform.php' ?>
     <div class="container pokedex">
-        <?php foreach ($pokedex as $pokemon) : ?>
+        <?php foreach ($pokedex as $produit) : ?>
             <div class="pokemon">
-                <figure>
                     <a href="<?= URL ?>pokemon.php?num=<?= $pokemon['num'] ?>">
-                        <img src="public/images/pokemon/small/<?= formatNumPokemon($pokemon['num']) ?>.png" alt="<?= $pokemon['nom'] ?>">
+                        <?php if ($produit['num']=="008"):?>
+                            <?php if($sousbock==1):?>
+                                <img src="public/images/produits/small/008-1" alt="" class="pic">
+                            <?php elseif($sousbock==2):?>
+                                <img src="public/images/produits/small/008-2" alt="" class="pic">
+                            <?php elseif($sousbock==3):?>
+                                <img src="public/images/produits/small/008-3" alt="" class="pic">
+                            <?php elseif($sousbock==4):?>
+                                <img src="public/images/produits/small/008-4" alt="" class="pic">
+                            <?php else:?>
+                                <img src="public/images/produits/small/008-5" alt="" class="pic">
+                            <?php endif ?>
+                        <?php else : ?>
+                        <img src="public/images/produits/small/<?= $produit['num'] ?>.png" alt="<?= $produit['nom'] ?>">
+                        <?php endif ?>
                     </a>
-                </figure>
                 <div class="description">
-                    <p class="pokemon-num">No. <?= formatNumPokemon($pokemon['num']) ?></p>
-                    <p class="pokemon-nom"><?= $pokemon['nom'] ?></p>
-                    <div class="types">
+                    <p class="pokemon-num">No. <?= $produit['num'] ?></p>
+                    <p class="pokemon-nom"><?= $produit['nom'] ?></p>
+                    <!--<div class="types">
                         <ul>
                             <?php foreach ($pokemon['types'] as $type) : ?>
                                 <li class="type--<?= convertType2Class($type) ?>"><?= $type ?></li>
                             <?php endforeach ?>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 
 <h1>Quelle est votre date de naissance ?</h1>
 <h2>Vous devez avoir 18 ans ou plus pour continuer.</h2>
-<form action="accueil.php" method="get">
+<form action="index.php" method="get">
 <div class="formulaire">
 <div class="form-jm">
   <label>

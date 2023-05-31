@@ -6,6 +6,9 @@ require_once 'config.php';
 require_once 'app/model/dataConnection.php';
 require_once 'app/model/boutique.model.php';
 
+$databaseConnection = getDatabaseConnection();
+$pokedex = getBoutique(1, $databaseConnection);
+$sousbock = rand(0,5);
 
 if (isset($_SESSION['majeur'])&&$_SESSION['majeur']) {
     $css = 'boutique.style.css';
