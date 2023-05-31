@@ -1,27 +1,29 @@
 <?php 
+session_start();
 
 require_once 'utils.php';
 require_once 'config.php';
 require_once 'app/model/dataConnection.php';
-require_once 'app/model/pokedex.model.php';
+require_once 'app/model/boutique.model.php';
 
-$search = $_POST['search'];
+if (empty($_GET['search'])){
+    $_SESSION['message'] = 'Veuillez rentrer une valeur';
+    header('location:' . URL . 'boutique.php');
+    exit;
+}
 
-//Récupère les pokemons correspondant à la recherche
-//Recherche du pokemon dans la base de données
 
 $databaseConnection = getDatabaseConnection();
-$pokedex = getPokedexByNum($search, $databaseConnection);
-$pokedex = addTypesToPokemons($pokedex, $databaseConnection);
+$pokedex = getProduitByNum($search, $databaseConnection);
 
 
 
 // Génération de la page à partir de la vue et du layout
-$page_title = 'Pokedex';
-$css = 'poke.css';
+$page_title = "Boutique - Alda";
+$css = 'boutique.style.css';
 
 ob_start();
-require_once 'app/view/pokedex.view.php';
+require_once 'app/view/boutique.view.php';
 $content = ob_get_clean();
 require_once 'app/view/common/layout.php'; 
 

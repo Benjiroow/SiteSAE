@@ -3,7 +3,7 @@
 require_once 'config.php';
 function getDataBaseConnection(): PDO
 {
-    $dsn = 'mysql:dbname=sitesaetest1;host=' . DB_HOST . ';charset=utf8';
+    $dsn = 'mysql:dbname=' . DB_NAME . ';host=' . DB_HOST . ';charset=utf8';
 
     try {
         $databaseConnection = new PDO($dsn, DB_USER, DB_PASSWORD);
