@@ -1,9 +1,9 @@
 <main>
     <?php include 'app/view/parts/searchform.php' ?>
     <div class="container pokedex">
-        <?php foreach ($pokedex as $produit) : ?>
+        <?php foreach ($boutique as $produit) : ?>
             <div class="pokemon">
-                    <a href="<?= URL ?>pokemon.php?num=<?= $pokemon['num'] ?>">
+                    <a href="<?= URL ?>produit.php?num=<?= $produit['num'] ?>">
                         <?php if ($produit['num']=="008"):?>
                             <?php if($sousbock==1):?>
                                 <img src="public/images/produits/small/008-1" alt="" class="pic">
@@ -21,14 +21,8 @@
                         <?php endif ?>
                     </a>
                 <div class="description">
-                    <p class="pokemon-num">No. <?= $produit['num'] ?></p>
-                    <p class="pokemon-nom"><?= $produit['nom'] ?></p>
-                    <!--<div class="types">
-                        <ul>
-                            <?php foreach ($pokemon['types'] as $type) : ?>
-                                <li class="type--<?= convertType2Class($type) ?>"><?= $type ?></li>
-                            <?php endforeach ?>
-                        </ul>-->
+                    <p class="produit-num">No. <?= $produit['num'] ?></p>
+                    <p class="produit-nom"><?= $produit['nom'] ?></p>
                     </div>
                 </div>
             </div>
@@ -38,7 +32,7 @@
             <nav class="nav-pagination" aria-label="pagination">
                 <ul class="pagination">
                     <?php if ($currentPage > 1) : ?>
-                        <li><a href="<?= URL ?>pokedex.php?page=<?= ($currentPage - 1) ?>"><span aria-hidden="true">«</span><span class="visuallyhidden">Page précédente</span></a></li>
+                        <li><a href="<?= URL ?>boutique.php?page=<?= ($currentPage - 1) ?>"><span aria-hidden="true">«</span><span class="visuallyhidden">Page précédente</span></a></li>
                     <?php endif ?>
                     <?php for ($i = 1; $i < $nbPages + 1; $i++) : ?>
                         <?php if ($currentPage == $i) : ?>
@@ -48,14 +42,14 @@
                             </li>
                         <?php else : ?>
                             <li>
-                                <a href="<?= URL ?>pokedex.php?page=<?= $i ?>">
+                                <a href="<?= URL ?>boutique.php?page=<?= $i ?>">
                                     <span class="visuallyhidden">page </span><?= $i ?>
                                 </a>
                             </li>
                         <?php endif ?>
                     <?php endfor ?>
                     <?php if ($currentPage < $nbPages) : ?>
-                        <li><a href="<?= URL ?>pokedex.php?page=<?= ($currentPage + 1) ?>"><span class="visuallyhidden">Page suivante</span><span aria-hidden="true">»</span></a></li>
+                        <li><a href="<?= URL ?>boutique.php?page=<?= ($currentPage + 1) ?>"><span class="visuallyhidden">Page suivante</span><span aria-hidden="true">»</span></a></li>
                     <?php endif ?>
                 </ul>
             </nav>

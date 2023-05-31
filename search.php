@@ -14,7 +14,7 @@ if (empty($_GET['search'])){
 
 
 $databaseConnection = getDatabaseConnection();
-$pokedex = getProduitByNum($search, $databaseConnection);
+$boutique = getProduitByNum($search, $databaseConnection);
 
 
 
