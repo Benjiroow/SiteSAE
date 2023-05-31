@@ -1,11 +1,12 @@
 <?php
 
-function getDatabaseConnection(): PDO
+require_once 'config.php';
+function getDataBaseConnection(): PDO
 {
-    $dsn = 'sqlite:C:\wamp64\www\pokemonSem2\app\database\pokemon.sqlite';
+    $dsn = 'mysql:dbname=sitesaetest1;host=' . DB_HOST . ';charset=utf8';
 
-    try { 
-        $databaseConnection = new PDO($dsn);
+    try {
+        $databaseConnection = new PDO($dsn, DB_USER, DB_PASSWORD);
         $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $databaseConnection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -13,6 +14,4 @@ function getDatabaseConnection(): PDO
     }
     return $databaseConnection;
 }
-
-
 

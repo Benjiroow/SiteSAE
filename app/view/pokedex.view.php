@@ -3,13 +3,13 @@
     <div class="container pokedex">
         <?php foreach ($pokedex as $pokemon) : ?>
             <div class="pokemon">
-                <figure>
+                <!--<figure>
                     <a href="">
                         <img src="public/images/pokemon/small/<?= formatNumPokemon($pokemon['num']) ?>.png" alt="<?= $pokemon['nom'] ?>">
                     </a>
                 </figure>
                 <div class="description">
-                    <p class="pokemon-num">No. <?= formatNumPokemon($pokemon['num']) ?></p>
+                    <p class="pokemon-num">No. <?= formatNumPokemon($pokemon['num']) ?></p>-->
                     <p class="pokemon-nom"><?= $pokemon['nom'] ?></p>
                     <div class="types">
                         <ul>

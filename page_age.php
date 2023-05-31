@@ -6,13 +6,7 @@ require_once 'config.php';
 
 // Génération de la page à partir de la vue et du layout
 $page_title = "Validation âge - Alda";
-$css = 'public/css/page_age.style.css';
-
-
-
-
-
-
+$css = 'page_age.style.css';
 
 ob_start();
 require_once 'app/view/page_age.view.php';

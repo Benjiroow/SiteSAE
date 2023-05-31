@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?= $css ?>">
     <link rel="icon" type="image/png" href="public\images\logo_alda_blanc_sur_fond_noir"/>
     <link rel="stylesheet" href="public/css/header.style.css">
     <link rel="stylesheet" href="public/css/footer.style.css">
+    <link rel="stylesheet" href="public/css/<?= $css ?>">
     <title><?= $page_title ?></title>
 </head>
 

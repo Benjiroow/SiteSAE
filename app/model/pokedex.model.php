@@ -1,5 +1,5 @@
 <?php
-
+/*
 function getPokedexWhithoutTypes(int $numPage, PDO $db): array
 {
     $end = $numPage * 12;
@@ -11,7 +11,17 @@ function getPokedexWhithoutTypes(int $numPage, PDO $db): array
     $results = $stmt->fetchAll();
     return $results;
 }
+*/
+function getBoutique(PDO $db): array
+{
+    $sql = "SELECT nom FROM produit WHERE num_produit=001";
+    $stmt = $db->query($sql);
 
+    $results = $stmt->fetchAll();
+    return $results;
+}
+
+/*
 function getPages(PDO $db) : int
 {
     //Trouver le nombre de pokemon dans la bd
@@ -21,7 +31,7 @@ function getPages(PDO $db) : int
     //Diviser le résultat par 12 (nombre de pokemon par page)
     return ceil($result['nb_pokemon'] / 12);
 }
-
+*/
 function getPokedexByNum(int $search, PDO $db) : array
 {
     $sql = "SELECT num_pokemon AS num, nom FROM pokemon WHERE num_pokemon=:numPokemon AND num_forme=0";

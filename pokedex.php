@@ -6,8 +6,8 @@ require_once 'app/model/dataConnection.php';
 require_once 'app/model/pokedex.model.php';
 
 
-$databaseConnection = getDatabaseConnection();
-$nbPages = getPages($databaseConnection);
+$databaseConnection = getDatabaseConnection();/*
+$nbPages = getPages($databaseConnection);*/
 
 
 //J'aurai un problème si :
@@ -28,8 +28,9 @@ if (empty($_GET['page']) || !is_numeric($_GET['page']) || $_GET['page'] < 1) {
 
 //$currentPage = $_GET['page']; // À ne pas faire comme ça 
 //echo htmlentities($currentPage); //désactive les chevrons pour pas que du script java puisse être mis à la place dans l'url et donc potentiels hacks
-$pokedex = getPokedexWhithoutTypes($currentPage, $databaseConnection);
-$pokedex = addTypesTopokemons($pokedex, $databaseConnection);
+//$pokedex = getPokedexWhithoutTypes($currentPage, $databaseConnection);
+//$pokedex = addTypesTopokemons($pokedex, $databaseConnection);
+$pokedex = getBoutique($currentPage, $databaseConnection);
 
 
 
