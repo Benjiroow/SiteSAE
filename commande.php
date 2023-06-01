@@ -2,6 +2,13 @@
 
 session_start();
 
+require_once 'config.php';
+require_once 'app/model/dataConnection.php';
+require_once 'app/model/client.model.php';
+
+$databaseConnection = getDatabaseConnection();
+$clients = getClients($databaseConnection);
+
 if (isset($_SESSION['majeur'])&&$_SESSION['majeur']) {
     $css = 'commande.style.css';
     $view = 'app/view/commande.view.php';

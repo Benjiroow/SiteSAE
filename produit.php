@@ -22,7 +22,7 @@ if (isset($_SESSION['majeur'])&&$_SESSION['majeur']) {
 
 
 
-// Données concernant le pokemon
+
 if (empty($_GET['num']) || !ctype_digit($_GET['num']) || $_GET['num']<0) {
     die('Aucun numéro de produit détecté ou numéro incorrect');
 }
