@@ -20,6 +20,8 @@ if (isset($_SESSION['majeur'])&&$_SESSION['majeur']) {
     $page_title = "Validation âge - Alda";
 }
 
+
+
 if (empty($_GET['page']) || !is_numeric($_GET['page']) || $_GET['page'] < 1) {
     $currentPage = 1;
 } else if ($_GET['page'] > $nbPages) {

@@ -1,8 +1,8 @@
 <main>
-    <?php include 'app/view/parts/searchform.php' ?>
-    <div class="container pokedex">
+    <?php // include 'app/view/parts/searchform.php' ?>
+    <div class="container boutique">
         <?php foreach ($boutique as $produit) : ?>
-            <div class="pokemon">
+            <div class="produit">
                     <a href="<?= URL ?>produit.php?num=<?= $produit['num'] ?>">
                         <?php if ($produit['num']=="008"):?>
                             <?php if($sousbock==1):?>
