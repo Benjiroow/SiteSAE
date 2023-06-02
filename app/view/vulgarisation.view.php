@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="public/css/vulgarisation.style.css">
+</head>
+<body>
 <h1>La création d'une légende</h1>
 
 <div class="tab">
@@ -31,3 +37,4 @@
     </p>
     <img src = public/images/fermentation.png>
 </div>
+</body>
