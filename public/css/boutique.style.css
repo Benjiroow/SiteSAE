@@ -1,6 +1,103 @@
-.search {
-    margin-top: 10% ;
+@font-face
+{
+    font-family:'Rasputin'; 
+    src: url('../polices/rasputin/Rasputin.otf'); 
+
 }
-.produit {
+
+@font-face
+{
+    font-family:'Montserrat Regular'; 
+    src: url('../polices/Montserrat/Montserrat-Regular.ttf'); 
+
+}
+
+
+
+body{
+    background-image: url('../images/fond-produit.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#container-boutique{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+}
+
+
+#titre{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Rasputin';
+    color: white;
+    margin-top: 12%;
+}
+
+
+#prod001{
+    background-image: url('../images/produits/small-backgrounds/001.png');
+}
+
+#prod002{
+    background-image: url('../images/produits/small-backgrounds/002.png');
+}
+
+#prod003{
+    background-image: url('../images/produits/small-backgrounds/003.png');
+}
+
+#prod004{
+    background-image: url('../images/produits/small-backgrounds/004.png');
+}
+
+#prod005{
+    background-image: url('../images/produits/small-backgrounds/005.png');
+}
+
+#prod006{
+    background-image: url('../images/produits/small-backgrounds/006.png');
+}
+
+#descprod005{
+    color:black;
+}
+
+#nomprod005{
+    color: black;
+}
+.sb{
+    background-color: rgb(123, 214, 193);
+}
+
+.produit{
     margin-top: 10%;
+    text-align: center;
 }
+
+
+.produit img{
+    border-radius: 20px;
+}
+
+.description{
+    color:white;
+}
+
+.produit-nom{
+    font-family: 'Rasputin';
+    color: white;
+}
+
+.produit-prix{
+    font-family: 'Montserrat Regular';
+}
+
+
+#copyrights{
+    margin-bottom: -2%;
+}
+
+  

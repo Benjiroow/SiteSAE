@@ -1,19 +1,145 @@
+@font-face
+{
+    font-family:'Rasputin'; 
+    src: url('../polices/rasputin/Rasputin.otf'); 
 
+}
 
+@font-face
+{
+    font-family:'Montserrat Regular'; 
+    src: url('../polices/Montserrat/Montserrat-Regular.ttf'); 
 
-
-
-
-
-
+}
 
 body{
-    background-image: url("public/images/foretaccueil.png");
     margin:0;
+    background-image:url("../images/backeil.png") ; /*image non présente dans les fichiers*/ 
     background-position:center;
     background-repeat: no-repeat;
-    height:700px;
+    background-size: cover;
+    min-height: 100vh;
 }
+
+h1{
+    margin-top: 10%;
+    font-family: 'Rasputin';
+    color:rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 3%;
+    font-size: 300%;
+    margin-bottom: -4%;
+}
+
+#accueiltxt section {
+    background-color: rgba(114,202,181,0.65);
+    border-radius: 25px;
+    width: 45%;
+    padding-top: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#accueiltxt{
+    display: flex;
+    justify-content: center;
+    margin-top: -20%;
+}
+
+
+p{
+    font-family: 'Montserrat';
+    color:rgb(255, 255, 255);
+    text-align: center;
+    margin-top: -20%;
+    font-size: 120%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+.pic-ctn {
+    width: 50vw;
+    height: 100px;
+}
+
+#copyrights{
+    margin-bottom: -2%;
+}
+
+@keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+}
+
+.pic-ctn {
+    position: relative;
+    width: 50vw;
+    height: 50em;
+    margin-top: 15vh;
+    z-index: -2;
+}
+
+.pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 12s infinite;
+    width: 50%;
+    margin-left: 17.5em;
+    border-radius: 20px;
+}
+
+img:nth-child(2) {
+    animation-delay: 2s;
+}
+img:nth-child(3) {
+    animation-delay: 4s;
+}
+img:nth-child(4) {
+    animation-delay: 6s;
+}
+img:nth-child(5) {
+    animation-delay: 8s;
+}
+img:nth-child(6) {
+    animation-delay: 10s;
+}
+
+#mondefanta{
+    font-size:xx-large;
+    font-family: 'Rasputin';
+}
+
+iframe{
+    margin-left: 35%;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 7%;
+}
+
+
 
 
 

@@ -1,0 +1,41 @@
+@font-face
+{
+    font-family:'Rasputin'; 
+    src: url('../polices/rasputin/Rasputin.otf'); 
+
+}
+
+@font-face
+{
+    font-family:'Montserrat Regular'; 
+    src: url('../polices/Montserrat/Montserrat-Regular.ttf'); 
+
+}
+
+
+
+body{
+    background-image: url('../images/fond-produit.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 70%;
+}
+
+main{
+    margin-top: 10%;
+}
+
+.pic{
+    border-radius: 20px;
+    float: left;
+    margin-bottom:5%;
+}
+
+.descprod{
+    float: left;
+    color: white;
+    font-family: 'Montserrat Regular';
+    width:70%;
+    margin-left: 2%;
+}
+

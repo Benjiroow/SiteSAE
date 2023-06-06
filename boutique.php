@@ -2,6 +2,7 @@
 
 session_start();
 
+
 require_once 'config.php';
 require_once 'app/model/dataConnection.php';
 require_once 'app/model/boutique.model.php';
@@ -32,7 +33,6 @@ if (empty($_GET['page']) || !is_numeric($_GET['page']) || $_GET['page'] < 1) {
 
 
 // Génération de la page à partir de la vue et du layout
-
 
 
 ob_start();

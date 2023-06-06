@@ -1,6 +1,6 @@
 <?php
 
-DEFINE('URL', 'https://localhost/SiteSAE/');
+DEFINE('URL', 'http://localhost/SiteSAE/');
 
 //paramètres base de données
 DEFINE('DB_HOST', 'localhost');

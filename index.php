@@ -16,7 +16,7 @@ $css = "page_age.style.css";
 
 if (isset($_SESSION['majeur'])&&$_SESSION['majeur']) {
     $view = 'app/view/accueil.view.php';
-    $css = 'acccueil.style.css';
+    $css = 'accueil.style.css';
     $page_title = "Page d'accueil - Alda";
 } else {
     
@@ -24,7 +24,7 @@ if (isset($_SESSION['majeur'])&&$_SESSION['majeur']) {
         $datedenaissance = $_GET['annee'];
         if ((date('Y') - $datedenaissance) >= 18) {
             $view = 'app/view/accueil.view.php';
-            $css = 'acccueil.style.css';
+            $css = 'accueil.style.css';
             $page_title = "Page d'accueil - Alda";
             $_SESSION['majeur'] = true;
         }

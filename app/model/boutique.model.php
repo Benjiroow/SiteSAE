@@ -6,7 +6,7 @@ function getBoutique(int $numPage, PDO $db): array
 {
     $end = 9;
     $begin = $end - 9;
-    $sql = "SELECT num_produit AS num, nom FROM produit LIMIT " . $begin .", " . $end;
+    $sql = "SELECT num_produit AS num, nom, prix FROM produit LIMIT " . $begin .", " . $end;
 
     $stmt = $db->query($sql);
 

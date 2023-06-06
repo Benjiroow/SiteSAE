@@ -1,0 +1,185 @@
+@font-face
+{
+    font-family:'Rasputin'; 
+    src: url('../polices/rasputin/Rasputin.otf'); 
+
+}
+
+@font-face
+{
+    font-family:'Montserrat Regular'; 
+    src: url('../polices/Montserrat/Montserrat-Regular.ttf'); 
+
+}
+
+
+*{
+    margin:0px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body{
+    background-image: url('../images/PaysageForet1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    min-height: 100vh;
+}
+
+
+
+main{
+    margin-top: 10%;
+}
+
+#histoire{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.titres, p{
+    color: white;
+}
+
+.titres {
+    margin: 50px 10px 75px 10px;
+    width: 25%;
+    text-align: center;
+    font-size: 50px;
+    font-family:'Rasputin';
+}
+
+#histoire section {
+    background-color: rgba(114,202,181,0.65);
+    border-radius: 25px;
+    width: 45%;
+}
+
+#histoire p {
+    font-size: 130%;
+    margin: 3% auto;
+    width: 75%;
+    text-align: center;
+    font-family:'Montserrat Regular';
+}
+
+#fondateur{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.img2{
+    width: 60%;
+    padding-left: 70px;
+}
+
+#fondateur ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 15%;
+}
+
+#fondateur img{
+    width: 40%;
+}
+
+#fondateur img:hover{
+    background-color:rgba(25, 182, 169, 0.65);
+    border-radius: 50px;
+    transition-duration: 1s;
+}
+
+#footer{
+    padding-top: 1%;
+}
+
+#copyrights{
+    padding-top: 24.5px;
+}
+
+.liste-footer h2 {
+    padding-bottom: 4.5%;
+}
+
+.liste-footer {
+    padding-bottom: 1%;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+      margin-top: 5%;
+    }
+  
+    #histoire h2 {
+      width: 80%;
+      font-size: 40px;
+      margin-bottom: 30px;
+      margin-top: 18%;
+    }
+  
+    #histoire section {
+      width: 90%;
+    }
+  
+    #histoire p {
+      width: 100%;
+      font-size: 110%;
+    }
+  
+  
+    #fondateur ul {
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 0;
+    }
+    
+    #fondateur img {
+        width: 50%;
+        margin-right: 10px; 
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    #histoire h2 {
+      font-size: 30px;
+      margin-top:30% ;
+    }
+  
+    #histoire section {
+      width: 95%;
+    }
+  
+    #histoire p {
+      font-size: 100%;
+    }
+
+
+    #fondateur h2 {
+        font-size:30px;
+    }
+
+
+    #fondateur ul {
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 0;
+      }
+    
+      #fondateur img {
+        width: 60%;
+        margin-right: 10px;
+      }
+}
+

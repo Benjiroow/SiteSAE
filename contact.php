@@ -12,6 +12,13 @@ if (isset($_SESSION['majeur'])&&$_SESSION['majeur']) {
     $page_title = "Validation âge - Alda";
 }
 
+if (isset($_SESSION['message'])){
+    $msgContact = htmlspecialchars($_SESSION['message']); // on récupère dans une variable, htmlspecialchars -> rendre inaccessible au public, pour sécuriser
+    unset($_SESSION['message']); //efface ce qu'il y a dans la session
+}
+
+
+
 // Génération de la page à partir de la vue et du layout
 
 ob_start();
